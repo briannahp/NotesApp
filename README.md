@@ -1,10 +1,6 @@
-# Notes Application
+# Notes App
 
-This application is a basic note taking mobile app implemented using React Native CLI. The function of creating a new note is called via a native module implemented with swift. 
-
-![simulator_screenshot_6ACF0839-F48E-42E9-8CCA-FB7DA7977428](https://github.com/user-attachments/assets/0e540910-98a5-4597-9b50-7f6b3098d602)
-
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### Basic Note-taking application that utilizes React Native CLI to call a Native IOS Module to create new notes. 
 
 ## Step 1: Install Dependencies
 
@@ -13,15 +9,23 @@ This application is a basic note taking mobile app implemented using React Nativ
 npm install
 ```
 
-## Step 2: Run the Application
+```bash
+# using cocoapods
+cd ios
+pod install
+```
 
-### For iOS
+## Step 2: Start your Application
 
 ```bash
 npx react-native run-ios
 ```
 
-## Dependencies/Useful Links
+
+## Useful Links/Dependencies
+
 - XCode: https://developer.apple.com/xcode/
-- Cocoapods: https://cocoapods.org/
+- CocoaPods: https://cocoapods.org/
 - React Native CLI: https://www.npmjs.com/package/react-native-cli
+
+

@@ -43,7 +43,6 @@ class NoteFormViewController: UIViewController {
       titleField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
       titleField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
       titleField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-      
       bodyField.topAnchor.constraint(equalTo: titleField.bottomAnchor, constant: 20),
       bodyField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
       bodyField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),

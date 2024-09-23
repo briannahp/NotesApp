@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* NotesApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NotesApplicationTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-NotesApplication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-NotesApplication.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -18,7 +17,7 @@
 		CE73A4502CA1AAE80083ECBA /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A44A2CA1AAE80083ECBA /* noop-file.swift */; };
 		CE73A4512CA1AAE80083ECBA /* NoteFormModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A44B2CA1AAE80083ECBA /* NoteFormModule.swift */; };
 		CE73A4522CA1AAE80083ECBA /* NoteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73A44D2CA1AAE80083ECBA /* NoteFormViewController.swift */; };
-		CE73A4562CA1BA1B0083ECBA /* NotesApp-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = CE73A44E2CA1AAE80083ECBA /* NotesApp-Bridging-Header.h */; };
+		CE73A4542CA1AF1E0083ECBA /* NotesApplication-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = CE73A44E2CA1AAE80083ECBA /* NotesApplication-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* NotesApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* NotesApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesApplicationTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* NotesApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* NotesApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NotesApplicationTests.xctest; path = "/Users/jaceegenbacher/Documents/NotesApplication/NotesApplication/ios/build/Debug-iphoneos/NotesApplication.app/PlugIns/NotesApplicationTests.xctest"; sourceTree = "<absolute>"; };
+		13B07F961A680F5B00A75B9A /* NotesApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NotesApplication.app; path = "/Users/jaceegenbacher/Documents/NotesApplication/NotesApplication/ios/build/Debug-iphoneos/NotesApplication.app"; sourceTree = "<absolute>"; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = NotesApplication/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = NotesApplication/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NotesApplication/Images.xcassets; sourceTree = "<group>"; };
@@ -52,7 +49,7 @@
 		CE73A44B2CA1AAE80083ECBA /* NoteFormModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFormModule.swift; sourceTree = "<group>"; };
 		CE73A44C2CA1AAE80083ECBA /* NoteFormModuleBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoteFormModuleBridge.m; sourceTree = "<group>"; };
 		CE73A44D2CA1AAE80083ECBA /* NoteFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFormViewController.swift; sourceTree = "<group>"; };
-		CE73A44E2CA1AAE80083ECBA /* NotesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotesApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE73A44E2CA1AAE80083ECBA /* NotesApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NotesApplication-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -76,23 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* NotesApplicationTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* NotesApplicationTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = NotesApplicationTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* NotesApplication */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +80,7 @@
 				CE73A44B2CA1AAE80083ECBA /* NoteFormModule.swift */,
 				CE73A44C2CA1AAE80083ECBA /* NoteFormModuleBridge.m */,
 				CE73A44D2CA1AAE80083ECBA /* NoteFormViewController.swift */,
-				CE73A44E2CA1AAE80083ECBA /* NotesApp-Bridging-Header.h */,
+				CE73A44E2CA1AAE80083ECBA /* NotesApplication-Bridging-Header.h */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -133,8 +113,6 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* NotesApplication */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* NotesApplicationTests */,
-				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
 			);
@@ -142,15 +120,6 @@
 			sourceTree = "<group>";
 			tabWidth = 2;
 			usesTabs = 0;
-		};
-		83CBBA001A601CBA00E9B192 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13B07F961A680F5B00A75B9A /* NotesApplication.app */,
-				00E356EE1AD99517003FC87E /* NotesApplicationTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
@@ -234,7 +203,7 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
-			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			productRefGroup = 83CBB9F61A601CBA00E9B192;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -399,7 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* NotesApplicationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE73A4562CA1BA1B0083ECBA /* NotesApp-Bridging-Header.h in Sources */,
+				CE73A4542CA1AF1E0083ECBA /* NotesApplication-Bridging-Header.h in Sources */,
 				CE73A44F2CA1AAE80083ECBA /* NoteFormModuleBridge.m in Sources */,
 				CE73A4502CA1AAE80083ECBA /* noop-file.swift in Sources */,
 				CE73A4512CA1AAE80083ECBA /* NoteFormModule.swift in Sources */,

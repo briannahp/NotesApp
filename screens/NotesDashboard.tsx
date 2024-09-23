@@ -9,14 +9,11 @@ import {
   NativeModules,
   Alert,
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Ensure you have this installed
 import notesStyles from '../styles/notesStyles';
 
-const { NoteFormModule } = NativeModules; // Destructure the native module
-
+const { NoteFormModule } = NativeModules; 
 
 const NotesDashboard: React.FC = () => {
-  // State to manage notes and selected note
   const [notes, setNotes] = useState<Note[]>([
     { id: '1', title: 'Example Note 1', content: 'I am Brianna. I am writing a note.', timestamp: new Date().toISOString()},
     { id: '2', title: 'Example Note 2', content: 'This is a different example note.', timestamp: new Date().toISOString()}]);
@@ -42,16 +39,23 @@ const NotesDashboard: React.FC = () => {
     }
   };
       
-  
-  const renderNote = ({ item }: { item: Note }) => (
+   const renderNote = ({ item }: { item: Note }) => (
     <TouchableOpacity
-      style={[
-        notesStyles.noteItem,
-      ]}
-      onPress={() => Alert.alert('Note selected', item.title)}
+      style={notesStyles.noteItem}
+      onPress={() => setSelectedNote(item)} 
     >
       <Text style={notesStyles.noteTitle}>{item.title}</Text>
-      <Text style={notesStyles.noteTimestamp}>{new Date(item.timestamp).toLocaleString()}</Text>
+      <Text style={notesStyles.noteTimestamp}>
+        { `Note Created On: ${new Date(item.timestamp).toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            timeZoneName: 'short'
+        })}`}
+        </Text>
     </TouchableOpacity>
   );
 
@@ -68,7 +72,7 @@ const NotesDashboard: React.FC = () => {
           />
           <View style={notesStyles.addNoteContainer}>
             <TouchableOpacity style={notesStyles.addButton} onPress={showNativeNoteForm}>
-                <Ionicons name="add" size={24} color="#fff" />
+                <Text style={notesStyles.addButtonText}>+</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -76,18 +80,34 @@ const NotesDashboard: React.FC = () => {
         <View style={notesStyles.detailsContainer}>
           {isAddingNote ? (
             <View style={notesStyles.addNoteForm}>
-                
               <TouchableOpacity style={notesStyles.saveButton}>
                 <Text style={notesStyles.saveButtonText}>Save Note2</Text>
               </TouchableOpacity>
             </View>
           ) : selectedNote ? (
             <ScrollView contentContainerStyle={notesStyles.noteDetails}>
-              <Text style={notesStyles.noteDetailTitle}>{selectedNote.title}</Text>
-              <Text style={notesStyles.noteDetailContent}>{selectedNote.content}</Text>
+              <Text style={notesStyles.noteDetailTitle}>
+                {selectedNote.title}
+              </Text>
+              <Text style={notesStyles.noteDetailContent}>
+                {selectedNote.content}
+              </Text>
+              <Text style={notesStyles.noteTimestamp}>
+                { `Note Created On: ${new Date(selectedNote.timestamp).toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric',
+                    timeZoneName: 'short'
+                    })}`}
+            </Text>
             </ScrollView>
           ) : (
-            <Text style={notesStyles.placeholderText}>Select a note or add a new one</Text>
+            <Text style={notesStyles.placeholderText}>
+              Select a note or add a new one
+            </Text>
           )}
         </View>
       </View>
