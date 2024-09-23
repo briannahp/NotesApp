@@ -1,0 +1,30 @@
+require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+
+platform :ios, min_ios_version_supported
+
+prepare_react_native_project!
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'NotesApplication' do
+  use_react_native!(
+    :path => "../node_modules/react-native",
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  target 'NotesApplicationTests' do
+    inherit! :complete
+  end
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      "../node_modules/react-native",
+      :mac_catalyst_enabled => false,
+    )
+  end
+end
